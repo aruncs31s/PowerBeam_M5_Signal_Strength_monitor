@@ -66,5 +66,3 @@ while True:
     except Exception as e:
         print(f"An error occurred: {e}")
         time.sleep(5)  # Adjust the delay as needed
-    except Exception as e:
-        print(f"An error occurred: {e}")

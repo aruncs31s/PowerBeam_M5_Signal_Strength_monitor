@@ -1,3 +1,3 @@
 import rain_count
 
-print(rain_count.count())
+rain_count.count()

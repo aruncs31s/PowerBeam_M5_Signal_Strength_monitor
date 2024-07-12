@@ -3,8 +3,25 @@ import requests
 import http.cookiejar as cookielib
 import time
 import urllib3
+import serial
 
-# Suppress the InsecureRequestWarning
+
+serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
+
+
+def rain_status_read(rain_count_previous):
+    try:
+        rain_count_now = serial_port.readline().decode("utf-8").strip()
+    except serial.SerialException as e:
+        print(f"Could not open serial port: {e}")
+
+    if rain_count_now == rain_count_previous:
+        Status = 0
+    else:
+        Status = 1
+
+
+# To Suppress the InsecureRequestWarning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Define URLs
@@ -58,7 +75,9 @@ while True:
     try:
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(f"{timestamp} - Signal value: {signal_value} dBm")
+        print(
+            f"{timestamp} - Signal value: {signal_value} dBm Rain_Status bool(Status)"
+        )
         # Save to file
         with open(output_file, "a") as f:
             f.write(f"{timestamp} - Signal value: {signal_value}\n")

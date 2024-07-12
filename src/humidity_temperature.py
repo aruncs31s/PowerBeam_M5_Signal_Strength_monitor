@@ -11,7 +11,7 @@ import Adafruit_DHT
 
 
 def temp():
-    print(Adafruit_DHT.read_retry(11, 4)[1])
+    return Adafruit_DHT.read_retry(11, 4)[0]
 
 
 temp()

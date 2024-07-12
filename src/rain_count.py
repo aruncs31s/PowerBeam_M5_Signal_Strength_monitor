@@ -12,3 +12,6 @@ def rain_count():
             print(f"{data}")
     except error as e:
         print(e)
+
+
+rain_count()

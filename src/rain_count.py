@@ -1,7 +1,7 @@
 import serial
 import time
 
-ser = serial.Serial("/dev/ttyAMA0", 9600)
+ser = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
 
 
 def rain_count():

@@ -6,7 +6,6 @@ Note That i've used Raspberry pi 2 b for this testing and when i try to connect 
 
 """
 
-import sys
 import Adafruit_DHT
 
 

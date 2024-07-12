@@ -1,3 +1,3 @@
-import rain_count
+import rain
 
-rain_count.count()
+rain.count()

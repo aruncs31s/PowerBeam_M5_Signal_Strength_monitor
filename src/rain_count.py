@@ -1,3 +1,4 @@
+from os import error
 import serial
 import time
 
@@ -10,5 +11,7 @@ def rain_count():
             if ser.in_waiting > 0:
                 data = ser.readline().decode("utf-8").strip()
                 print(f"{data}")
-    except KeyboardInterrupt:
-        ser.close()
+                ser.close()
+
+    except error as e:
+        print(e)

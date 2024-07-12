@@ -11,7 +11,9 @@ def rain_count():
             if ser.in_waiting > 0:
                 data = ser.readline().decode("utf-8").strip()
                 print(f"{data}")
-                ser.close()
 
     except error as e:
+        ser.close()
         print(e)
+    finally:
+        rain_count()

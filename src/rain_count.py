@@ -16,4 +16,5 @@ def rain_count():
         ser.close()
         print(e)
     finally:
+        time.sleep(5)
         rain_count()

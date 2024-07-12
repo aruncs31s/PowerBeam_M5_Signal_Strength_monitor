@@ -9,6 +9,6 @@ def rain_count():
         while True:
             if ser.in_waiting > 0:
                 data = ser.readline().decode("utf-8").strip()
-               print(f"{data}")
+                print(f"{data}")
     except KeyboardInterrupt:
         ser.close()

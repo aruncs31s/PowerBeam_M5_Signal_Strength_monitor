@@ -14,7 +14,6 @@ def rain_status_read(rain_count_previous):
         rain_count_now = serial_port.readline().decode("utf-8").strip()
     except serial.SerialException as e:
         print(f"Could not open serial port: {e}")
-
     if rain_count_now == rain_count_previous:
         Status = 0
     else:

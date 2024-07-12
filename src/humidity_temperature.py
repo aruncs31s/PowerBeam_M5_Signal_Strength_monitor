@@ -18,7 +18,5 @@ def humidity():
     return Adafruit_DHT.read_retry(11, 4)[1]
 
 
-temp()
-
 if __name__ == "__main__":
     print(f"Temperature is {temp()} Humidity is {humidity()}")

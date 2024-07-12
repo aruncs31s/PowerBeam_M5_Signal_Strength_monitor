@@ -1,3 +1,5 @@
+# Author : Arun CS
+# Github : https://github.com/aruncs31s/
 import sys
 import Adafruit_DHT
 

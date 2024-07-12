@@ -14,4 +14,8 @@ def temp():
     return Adafruit_DHT.read_retry(11, 4)[0]
 
 
+def humidity():
+    return Adafruit_DHT.read_retry(11, 4)[1]
+
+
 temp()

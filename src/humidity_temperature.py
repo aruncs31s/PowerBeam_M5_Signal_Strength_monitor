@@ -19,3 +19,6 @@ def humidity():
 
 
 temp()
+
+if __name__ == "__main__":
+    print(f"Temperature is {temp()} Humidity is {humidity()}")

@@ -10,11 +10,11 @@ import Adafruit_DHT
 
 
 def temp():
-    return Adafruit_DHT.read_retry(11, 4)[0]
+    return Adafruit_DHT.read_retry(11, 4)[1]
 
 
 def humidity():
-    return Adafruit_DHT.read_retry(11, 4)[1]
+    return Adafruit_DHT.read_retry(11, 4)[0]
 
 
 if __name__ == "__main__":

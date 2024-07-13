@@ -70,7 +70,6 @@ def measure():
     try:
         temp = dht.temp()
         humidity = dht.humidity()
-        print(f"rain count : {rain_count}")
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(

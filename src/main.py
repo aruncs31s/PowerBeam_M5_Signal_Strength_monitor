@@ -11,17 +11,6 @@ import serial
 serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
 
 
-def rain_status_read(rain_count_previous):
-    try:
-        rain_count_now = serial_port.readline().decode("utf-8").strip()
-    except serial.SerialException as e:
-        print(f"Could not open serial port: {e}")
-    if rain_count_now == rain_count_previous:
-        Status = 0
-    else:
-        Status = 1
-
-
 # To Suppress the InsecureRequestWarning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -72,6 +61,8 @@ def get_signal_value():
 
 
 # Loop to repeatedly get the signal value
+
+rain_count_now = 0
 
 
 def measure():

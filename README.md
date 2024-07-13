@@ -24,7 +24,7 @@ urllib3
 
 ### POC
 
-![](image.png?raw=true)
+![](images/image.png?raw=true)
 
 ### Implementation
 
@@ -39,6 +39,8 @@ It reading with raspberry is more difficult and require these following for the 
 1. DTH11 Sensor
 2. Rain Sensor
    These are used for only to increase the accuracy
+
+![](images/image_rpi.png?raw=true)
 
 #### Raspberry Pi Python Dependencies
 

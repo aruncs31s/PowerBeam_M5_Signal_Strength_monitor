@@ -8,7 +8,6 @@ import time
 import urllib3
 import serial
 
-
 serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
 
 
@@ -43,7 +42,6 @@ response = session.get(login_url, headers=headers, verify=False)
 session.cookies.save()
 
 
-# Step 2: Perform login
 def login():
     response = session.post(login_url, data=payload, headers=headers, verify=False)
     session.cookies.save()

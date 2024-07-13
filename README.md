@@ -3,7 +3,9 @@
 <!--toc:start-->
 
 - [PowerBeam_M5_Signal_Strength_monitor](#powerbeamm5signalstrengthmonitor)
-  - [Python Dependencies](#python-dependencies) - [POC](#poc) - [Reading With Raspberry pi](#reading-with-raspberry-pi) - [Raspberry Pi Python Dependencies](#raspberry-pi-python-dependencies)
+  - [Python Dependencies](#python-dependencies)
+  - [POC](#poc) - [Reading With Raspberry pi](#reading-with-raspberry-pi)
+  - [Raspberry Pi Python Dependencies](#raspberry-pi-python-dependencies)
   <!--toc:end-->
 
 This python script automates data retrieval (signal strength) from `Ubiquiti PowerBeam M5 400`` which uses `AirMax`

@@ -97,4 +97,4 @@ while True:
         measure()
     except Exception as e:
         print(f"An error occurred in the main loop: {e}")
-        time.sleep(10)
+        time.sleep(1)

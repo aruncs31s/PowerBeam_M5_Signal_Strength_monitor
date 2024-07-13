@@ -84,10 +84,10 @@ def measure():
 
 
 # Loop to repeatedly get the signal value
-if __name__ == "__main__":
-    while True:
-        try:
-            measure()
-        except Exception as e:
-            print(f"An error occurred in the main loop: {e}")
-            time.sleep(1)  # Wait before restarting the loop
+
+while True:
+    try:
+        measure()
+    except Exception as e:
+        print(f"An error occurred in the main loop: {e}")
+        time.sleep(1)  # Wait before restarting the loop

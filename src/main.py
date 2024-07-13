@@ -1,3 +1,10 @@
+import sys
+import os
+
+# Assuming the subfolder is named 'subfolder' and located in the same directory as this script
+subfolder_path = os.path.join(os.path.dirname(__file__), "lib")
+sys.path.append(subfolder_path)
+
 from logging import error
 import rain
 import humidity_temperature as dht

@@ -50,6 +50,7 @@ def login():
 
 
 # Check if login was successful by checking cookies or a specific element in the response
+login()
 if "AIROS_F492BF4A5898" in session.cookies:
     print("Login successful")
 else:

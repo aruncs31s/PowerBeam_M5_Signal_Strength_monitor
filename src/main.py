@@ -61,10 +61,11 @@ def get_signal_value():
     return signal
 
 
-global rain_count = 0
+rain_count = 0
 
 
 def measure():
+    global rain_count
     print("HI")
     try:
         temp = dht.temp()

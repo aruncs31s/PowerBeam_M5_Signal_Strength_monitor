@@ -37,7 +37,7 @@ session = requests.Session()
 # Initialize a CookieJar to store cookies
 session.cookies = cookielib.LWPCookieJar("cookies.txt")
 
-# Step 1: Get initial cookies from the login page
+# Get initial cookies from the login page
 response = session.get(login_url, headers=headers, verify=False)
 session.cookies.save()
 

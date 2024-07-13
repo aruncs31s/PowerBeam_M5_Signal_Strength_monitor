@@ -1,5 +1,5 @@
 from logging import error
-import lib.rain
+from lib import rain
 import humidity_temperature as dht
 from datetime import datetime
 import requests

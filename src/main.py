@@ -15,7 +15,7 @@ serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Define URLs change the change_me in my case it was the default ip by the antena
-base_url = "https://change_me"
+base_url = "https://172.16.36.13"
 login_url = f"{base_url}/login.cgi"
 status_url = f"{base_url}/status.cgi"
 output_file = "signal_log.txt"
@@ -29,7 +29,7 @@ headers = {
 }
 
 # Define login credentials
-payload = {"username": "change_me", "password": "change_me", "uri": "/index.cgi"}
+payload = {"username": "ubnt", "password": "cs4@admin", "uri": "/index.cgi"}
 
 # Initialize session
 session = requests.Session()

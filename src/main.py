@@ -65,6 +65,7 @@ rain_count_now = 0
 
 
 def measure():
+    print("HI")
     while True:
         try:
             signal_value = get_signal_value()

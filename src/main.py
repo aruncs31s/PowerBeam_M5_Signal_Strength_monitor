@@ -61,12 +61,13 @@ def get_signal_value():
     return signal
 
 
-rain_count_now = 0
+rain_count = 0
 
 
 def measure():
     print("HI")
     try:
+
         temp = dht.temp()
         humidity = dht.humidity()
 

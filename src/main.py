@@ -66,7 +66,6 @@ rain_count = rain_meter.get_count()
 
 def measure():
     global rain_count
-    print("HI")
     try:
         temp = dht.temp()
         humidity = dht.humidity()

@@ -76,9 +76,9 @@ def measure():
         )
         # Save to file
         with open(output_file, "a") as f:
-        f.write(
-        f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Status: {rain_meter.compare(rain_count_previous=rain_count)} \n"
-        )
+            f.write(
+                f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Status: {rain_meter.compare(rain_count_previous=rain_count)} \n"
+            )
         time.sleep(1)
         rain_count = rain_meter.get_count()
         time.sleep(1)

@@ -24,6 +24,12 @@ urllib3
 
 ![](image.png?raw=true)
 
+### Implementation
+
+- Configure PowerBeam M5
+- Change the `base url` and passwords in the python code
+- if error occurs google it or [contact me](https://github.com/aruncs31s/aruncs31s)
+
 #### Reading With Raspberry pi
 
 It reading with raspberry is more difficult and require these following for the temperature , humidity and rain sensing

@@ -4,7 +4,7 @@
 
 import serial
 
-rain_sensor = serial.Serial("/dev/ttyAMA0", 9600, timeout=2)
+rain_sensor = serial.Serial("/dev/ttyAMA0", 9600, timeout=10)
 
 
 def get_count():

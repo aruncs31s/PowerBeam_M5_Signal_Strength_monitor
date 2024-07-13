@@ -42,13 +42,11 @@ response = session.get(login_url, headers=headers, verify=False)
 session.cookies.save()
 
 
-def login():
-    response = session.post(login_url, data=payload, headers=headers, verify=False)
-    session.cookies.save()
+response = session.post(login_url, data=payload, headers=headers, verify=False)
+session.cookies.save()
 
 
 # Check if login was successful by checking cookies or a specific element in the response
-login()
 if "AIROS_F492BF4A5898" in session.cookies:
     print("Login successful")
 else:
@@ -92,5 +90,4 @@ if __name__ == "__main__":
             measure()
         except Exception as e:
             print(f"An error occurred in the main loop: {e}")
-            login()
             time.sleep(10)  # Wait before restarting the loop

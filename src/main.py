@@ -74,12 +74,12 @@ def measure():
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(
-            f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp}  Humidity: {humidity} Rain Status: {rain_meter.compare(rain_count_previous=rain_count)}"
+            f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp}  Humidity: {humidity}"
         )
         # Save to file
         with open(output_file, "a") as f:
             f.write(
-                f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity} \n"
+                f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Status: {rain_meter.compare(rain_count_previous=rain_count)} \n"
             )
         time.sleep(5)
         rain_count = rain_meter.get_count()

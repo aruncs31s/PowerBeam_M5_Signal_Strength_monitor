@@ -75,7 +75,7 @@ def measure():
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(
-            f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp}  Humidity: {humidity}"
+            f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp}  Humidity: {humidity} Rain Status: rain.compare()"
         )
         # Save to file
         with open(output_file, "a") as f:

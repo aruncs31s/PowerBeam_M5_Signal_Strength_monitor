@@ -63,6 +63,8 @@ def get_signal_value():
 
 rain_count = rain_meter.get_count()
 
+sleep(10)
+
 
 def measure():
     global rain_count

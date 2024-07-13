@@ -72,7 +72,9 @@ def measure():
         print("HI from try 1")
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} ")
+        print(
+            f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp}  Humidity: {humidity}"
+        )
         # Save to file
         with open(output_file, "a") as f:
             f.write(f"{timestamp} - Signal value: {signal_value}\n")

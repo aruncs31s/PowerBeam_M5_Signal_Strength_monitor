@@ -11,6 +11,7 @@ rain_count = rain.count()
 temp = dht.temp()
 humidity = dht.humidity()
 
+
 serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
 
 

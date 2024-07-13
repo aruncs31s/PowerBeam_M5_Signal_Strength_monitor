@@ -66,22 +66,21 @@ rain_count_now = 0
 
 def measure():
     print("HI")
-    while True:
-        try:
-            signal_value = get_signal_value()
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            print(
-                f"{timestamp} - Signal value: {signal_value} dBm ,Humidity: {dht.humidity()} "
-            )
-            # Save to file
-            with open(output_file, "a") as f:
-                f.write(f"{timestamp} - Signal value: {signal_value}\n")
-            time.sleep(5)  # Adjust the delay as needed
-            rain_count_now = rain.get_count()
+    try:
+        signal_value = get_signal_value()
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(
+            f"{timestamp} - Signal value: {signal_value} dBm ,Humidity: {dht.humidity()} "
+        )
+        # Save to file
+        with open(output_file, "a") as f:
+            f.write(f"{timestamp} - Signal value: {signal_value}\n")
+        time.sleep(5)  # Adjust the delay as needed
+        rain_count_now = rain.get_count()
 
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            time.sleep(10)  # Adjust the delay as needed
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        time.sleep(10)  # Adjust the delay as needed
 
 
 # Loop to repeatedly get the signal value

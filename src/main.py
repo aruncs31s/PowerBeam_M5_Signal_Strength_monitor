@@ -86,8 +86,9 @@ def measure():
 
 
 if __name__ == "__main__":
-    try:
-        measure()
-    except Exception as e:
-        print(f"An error occurred in the main loop: {e}")
-        time.sleep(10)  # Wait before restarting the loop
+    while True:
+        try:
+            measure()
+        except Exception as e:
+            print(f"An error occurred in the main loop: {e}")
+            time.sleep(10)  # Wait before restarting the loop

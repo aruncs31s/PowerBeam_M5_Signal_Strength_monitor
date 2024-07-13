@@ -42,9 +42,12 @@ session.cookies = cookielib.LWPCookieJar("cookies.txt")
 response = session.get(login_url, headers=headers, verify=False)
 session.cookies.save()
 
+
 # Step 2: Perform login
-response = session.post(login_url, data=payload, headers=headers, verify=False)
-session.cookies.save()
+def login():
+    response = session.post(login_url, data=payload, headers=headers, verify=False)
+    session.cookies.save()
+
 
 # Check if login was successful by checking cookies or a specific element in the response
 if "AIROS_F492BF4A5898" in session.cookies:

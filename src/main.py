@@ -66,26 +66,27 @@ rain_count = rain_meter.get_count()
 
 def measure():
     global rain_count
-    try:
-        temp = dht.temp()
-        humidity = dht.humidity()
-        signal_value = get_signal_value()
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(
-            f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp}  Humidity: {humidity}"
-        )
-        # Save to file
-        with open(output_file, "a") as f:
-            f.write(
-                f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Status: {rain_meter.compare(rain_count_previous=rain_count)} \n"
+    while True:
+        try:
+            temp = dht.temp()
+            humidity = dht.humidity()
+            signal_value = get_signal_value()
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            print(
+                f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp}  Humidity: {humidity}"
             )
-        time.sleep(1)
-        rain_count = rain_meter.get_count()
-        time.sleep(1)
+            # Save to file
+            with open(output_file, "a") as f:
+                f.write(
+                    f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Status: {rain_meter.compare(rain_count_previous=rain_count)} \n"
+                )
+            time.sleep(1)
+            rain_count = rain_meter.get_count()
+            time.sleep(1)
 
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        time.sleep(20)  # Adjust the delay as needed
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            time.sleep(20)  # Adjust the delay as needed
 
 
 # Loop to repeatedly get the signal value

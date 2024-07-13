@@ -80,7 +80,6 @@ def measure():
                 f.write(
                     f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Status:  \n"
                 )
-            time.sleep(1)
             rain_count = rain_meter.get_count()
             time.sleep(1)
 

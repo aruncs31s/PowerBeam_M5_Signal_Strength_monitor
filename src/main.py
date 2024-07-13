@@ -74,7 +74,6 @@ def get_signal_value():
 # Loop to repeatedly get the signal value
 while True:
     try:
-        rain_count_now = rain.get_count()
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(
@@ -84,6 +83,8 @@ while True:
         with open(output_file, "a") as f:
             f.write(f"{timestamp} - Signal value: {signal_value}\n")
         time.sleep(5)  # Adjust the delay as needed
+        rain_count_now = rain.get_count()
+
     except Exception as e:
         print(f"An error occurred: {e}")
         time.sleep(5)  # Adjust the delay as needed

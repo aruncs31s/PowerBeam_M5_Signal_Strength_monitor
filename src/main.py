@@ -8,8 +8,6 @@ import time
 import urllib3
 import serial
 
-serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
-
 
 # To Suppress the InsecureRequestWarning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)

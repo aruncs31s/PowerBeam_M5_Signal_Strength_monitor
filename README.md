@@ -25,3 +25,10 @@ It reading with raspberry is more difficult and require these following for the 
 1. DTH11 Sensor
 2. Rain Sensor
    These are used for only to increase the accuracy
+
+##### Raspberry Pi Python Dependencies
+
+```
+Adafruit_DHT
+serial
+```

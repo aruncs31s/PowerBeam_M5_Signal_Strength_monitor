@@ -14,7 +14,7 @@ This Script has 3 parts
 - Normal Reading
 - Reading With Raspberry Pi
 
-## Python Dependencies
+### Python Dependencies
 
 ```
 requests

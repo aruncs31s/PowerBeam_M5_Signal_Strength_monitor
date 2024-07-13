@@ -69,6 +69,7 @@ def measure():
     try:
         temp = dht.temp()
         humidity = dht.humidity()
+
         print("HI from try 1")
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

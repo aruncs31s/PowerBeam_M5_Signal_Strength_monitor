@@ -29,7 +29,7 @@ headers = {
 }
 
 # Define login credentials
-payload = {"username": "ubnt", "password": "cs4@admin", "uri": "/index.cgi"}
+payload = {"username": "ubnt", "password": "c4s@admin", "uri": "/index.cgi"}
 
 # Initialize session
 session = requests.Session()

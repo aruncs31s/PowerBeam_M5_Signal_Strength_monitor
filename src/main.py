@@ -77,7 +77,9 @@ def measure():
         )
         # Save to file
         with open(output_file, "a") as f:
-            f.write(f"{timestamp} - Signal value: {signal_value}\n Temp:  {temp} ")
+            f.write(
+                f"{timestamp} - Signal value: {signal_value}\n Temp:  {temp}  Humidity: {humidity}"
+            )
         # rain_count_now = rain.get_count()
 
     except Exception as e:

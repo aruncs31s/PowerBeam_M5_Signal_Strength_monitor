@@ -63,8 +63,6 @@ def get_signal_value():
     return signal
 
 
-# Loop to repeatedly get the signal value
-
 rain_count_now = 0
 
 
@@ -87,6 +85,7 @@ def measure():
             time.sleep(10)  # Adjust the delay as needed
 
 
+# Loop to repeatedly get the signal value
 if __name__ == "__main__":
     while True:
         try:

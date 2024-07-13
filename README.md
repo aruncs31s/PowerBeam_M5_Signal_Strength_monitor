@@ -6,7 +6,7 @@
   - [Python Dependencies](#python-dependencies) - [POC](#poc) - [Reading With Raspberry pi](#reading-with-raspberry-pi) - [Raspberry Pi Python Dependencies](#raspberry-pi-python-dependencies)
   <!--toc:end-->
 
-This python script automates data retrieval (signal strength) from Ubiquiti PowerBeam M5 400 which uses AirMax
+This python script automates data retrieval (signal strength) from `Ubiquiti PowerBeam M5 400`` which uses `AirMax`
 This Script has 3 parts
 
 - Normal Reading
@@ -39,7 +39,7 @@ Adafruit_DHT
 serial
 ```
 
-also i have used interrupt to handle rain counting so this following code should be uploaded to Arduino or any other micro controller or SOC Boards like raspberry pi , i did not use the Raspberry pi because it does not have a software interrupt on the `2 B` model
+also i have used interrupt to handle rain counting so this following code should be uploaded to `Arduino` or any other micro controller or SOC Boards like raspberry pi , i did not use the Raspberry pi because it does not have a software interrupt on the `2 B` model
 
 ```c
 volatile int event_counter = 0;

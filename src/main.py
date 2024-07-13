@@ -86,7 +86,7 @@ def measure():
 
         except Exception as e:
             print(f"An error occurred: {e}")
-            time.sleep(2)  # Adjust the delay as needed
+            time.sleep(1)  # Adjust the delay as needed
 
 
 # Loop to repeatedly get the signal value

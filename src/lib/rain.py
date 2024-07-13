@@ -4,10 +4,9 @@
 
 import serial
 
-rain_sensor = serial.Serial("/dev/ttyAMA0", 9600, timeout=10)
-
 
 def get_count():
+    rain_sensor = serial.Serial("/dev/ttyAMA0", 9600, timeout=10)
     try:
         while True:
             if rain_sensor.in_waiting > 0:

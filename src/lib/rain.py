@@ -11,7 +11,7 @@ def get_count():
     try:
         while True:
             if rain_sensor.in_waiting > 0:
-                count = int(rain_sensor.readline().decode("utf-8").strip())
+                count = rain_sensor.readline().decode("utf-8").strip()
                 rain_sensor.close()
                 return count
                 exit(0)

@@ -67,7 +67,7 @@ rain_count = 0
 def measure():
     print("HI")
     try:
-
+        print(f"rain count : {rain_count})
         temp = dht.temp()
         humidity = dht.humidity()
 

@@ -80,7 +80,7 @@ def measure():
         # Save to file
         with open(output_file, "a") as f:
             f.write(
-                f"{timestamp} - Signal value: {signal_value} Temp:  {temp}  Humidity: {humidity} \n"
+                f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity} \n"
             )
         rain_count = rain.get_count()
 

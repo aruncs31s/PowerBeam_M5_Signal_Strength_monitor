@@ -4,16 +4,15 @@
 
 import serial
 
-rain_sensor = serial.Serial("/dev/ttyAMA0", 9600, timeout=10)
+rain_sensor = serial.Serial("/dev/ttyAMA0", 9600, timeout=15)
 
 
 def get_count():
     try:
         while True:
             if rain_sensor.in_waiting > 0:
-                count = rain_sensor.readline().decode("utf-8").strip()
-                rain_sensor.close()
-                return int(count)
+
+                return int(rain_sensor.readline().decode("utf-8").strip())
                 exit(0)
     except KeyboardInterrupt:
         rain_sensor.close()

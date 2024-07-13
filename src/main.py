@@ -71,9 +71,7 @@ def measure():
         print("HI from try 1")
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(
-            f"{timestamp} - Signal value: {signal_value} dBm ,Humidity: {dht.humidity()} "
-        )
+        print(f"{timestamp} - Signal value: {signal_value} dBm  ")
         # Save to file
         with open(output_file, "a") as f:
             f.write(f"{timestamp} - Signal value: {signal_value}\n")
@@ -92,4 +90,4 @@ while True:
         measure()
     except Exception as e:
         print(f"An error occurred in the main loop: {e}")
-        time.sleep(1)  # Wait before restarting the loop
+        time.sleep(1)

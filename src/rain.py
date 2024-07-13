@@ -13,5 +13,7 @@ def count():
     except KeyboardInterrupt:
         rain_sensor.close()
 
+
 def compare(rain_count_previous):
-    if rain_count_previous == count() ;
+    if rain_count_previous == count():
+        return True

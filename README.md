@@ -8,7 +8,7 @@
   - [Raspberry Pi Python Dependencies](#raspberry-pi-python-dependencies)
   <!--toc:end-->
 
-This python script automates data retrieval (signal strength) from `Ubiquiti PowerBeam M5 400`` which uses `AirMax`
+This python script automates data retrieval (signal strength) from `Ubiquiti PowerBeam M5 400` which uses `AirMax`
 This Script has 3 parts
 
 - Normal Reading

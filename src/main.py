@@ -74,6 +74,7 @@ def get_signal_value():
 # Loop to repeatedly get the signal value
 while True:
     try:
+        rain_count_now = rain.count()
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(

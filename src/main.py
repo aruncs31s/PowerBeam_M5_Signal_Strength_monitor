@@ -1,3 +1,4 @@
+from logging import error
 import rain
 import humidity_temperature as dht
 from datetime import datetime
@@ -82,8 +83,11 @@ def measure():
         except Exception as e:
             print(f"An error occurred: {e}")
             time.sleep(10)  # Adjust the delay as needed
-            measure()
 
 
 if __name__ == "__main__":
-    measure()
+    try:
+        measure()
+    except Exception as e:
+        print(f"An error occurred in the main loop: {e}")
+        time.sleep(10)  # Wait before restarting the loop

@@ -29,7 +29,7 @@ def rain_status_read(rain_count_previous):
 # To Suppress the InsecureRequestWarning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# Define URLs
+# Define URLs change the change_me in my case it was the default ip by the antena
 base_url = "https://change_me"
 login_url = f"{base_url}/login.cgi"
 status_url = f"{base_url}/status.cgi"
@@ -80,9 +80,7 @@ while True:
     try:
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(
-            f"{timestamp} - Signal value: {signal_value} dBm Rain_Status bool(Status)"
-        )
+        print(f"{timestamp} - Signal value: {signal_value} dBm Rain_Status ")
         # Save to file
         with open(output_file, "a") as f:
             f.write(f"{timestamp} - Signal value: {signal_value}\n")

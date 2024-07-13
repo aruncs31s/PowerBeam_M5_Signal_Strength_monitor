@@ -20,6 +20,6 @@ def get_count():
 
 def compare(rain_count_previous):
     if rain_count_previous == get_count():
-        return True
-    else:
         return False
+    else:
+        return True

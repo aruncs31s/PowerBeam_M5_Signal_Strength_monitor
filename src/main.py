@@ -61,7 +61,7 @@ def get_signal_value():
     return signal
 
 
-globals rain_count = 0
+global rain_count = 0
 
 
 def measure():

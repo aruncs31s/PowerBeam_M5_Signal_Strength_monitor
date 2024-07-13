@@ -11,7 +11,6 @@ This Script has 3 parts
 ```
 requests
 http
-time
 urllib3
 ```
 

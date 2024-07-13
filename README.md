@@ -32,7 +32,7 @@ urllib3
 - Change the `base url` and passwords in the python code
 - if error occurs google it or [contact me](https://github.com/aruncs31s/aruncs31s)
 
-#### Reading With Raspberry pi
+## Reading With Raspberry pi
 
 It reading with raspberry is more difficult and require these following for the temperature , humidity and rain sensing
 
@@ -40,7 +40,7 @@ It reading with raspberry is more difficult and require these following for the 
 2. Rain Sensor
    These are used for only to increase the accuracy
 
-##### Raspberry Pi Python Dependencies
+#### Raspberry Pi Python Dependencies
 
 ```
 Adafruit_DHT

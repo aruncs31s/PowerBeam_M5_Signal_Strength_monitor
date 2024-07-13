@@ -90,4 +90,4 @@ if __name__ == "__main__":
             measure()
         except Exception as e:
             print(f"An error occurred in the main loop: {e}")
-            time.sleep(10)  # Wait before restarting the loop
+            time.sleep(1)  # Wait before restarting the loop

@@ -67,6 +67,8 @@ rain_count_now = 0
 def measure():
     print("HI")
     try:
+
+        print("HI from try 1")
         signal_value = get_signal_value()
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         print(
@@ -76,7 +78,7 @@ def measure():
         with open(output_file, "a") as f:
             f.write(f"{timestamp} - Signal value: {signal_value}\n")
         time.sleep(5)  # Adjust the delay as needed
-        rain_count_now = rain.get_count()
+        # rain_count_now = rain.get_count()
 
     except Exception as e:
         print(f"An error occurred: {e}")

@@ -1,6 +1,6 @@
 from logging import error
 from lib import rain
-import humidity_temperature as dht
+from lib import humidity_temperature as dht
 from datetime import datetime
 import requests
 import http.cookiejar as cookielib

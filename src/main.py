@@ -81,9 +81,9 @@ def measure():
         # f.write(
         # f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Status: {rain_meter.compare(rain_count_previous=rain_count)} \n"
         # )
-        time.sleep(1)
+        time.sleep(10)
         rain_count = rain_meter.get_count()
-        time.sleep(1)
+        time.sleep(10)
 
     except Exception as e:
         print(f"An error occurred: {e}")

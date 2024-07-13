@@ -92,3 +92,7 @@ def measure():
             print(f"An error occurred: {e}")
             time.sleep(10)  # Adjust the delay as needed
             measure()
+
+
+if __name__ == "__main__":
+    measure()

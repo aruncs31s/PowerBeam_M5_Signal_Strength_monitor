@@ -8,7 +8,6 @@ import time
 import urllib3
 import serial
 
-serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
 
 
 # To Suppress the InsecureRequestWarning
@@ -61,11 +60,7 @@ def get_signal_value():
     return signal
 
 
-rain_count = rain_meter.get_count()
-
-
 def measure():
-    global rain_count
     while True:
         try:
             temp = dht.temp()
@@ -78,9 +73,8 @@ def measure():
             # Save to file
             with open(output_file, "a") as f:
                 f.write(
-                    f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Count: {rain_count} Rain Status: {rain_meter.compare(rain_count_previous=rain_count)} \n"
+                    f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  \n"
                 )
-            rain_count = rain_meter.get_count()
             time.sleep(5)
         except Exception as e:
             print(f"An error occurred: {e}")

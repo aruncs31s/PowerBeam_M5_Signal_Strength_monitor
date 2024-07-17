@@ -1,5 +1,5 @@
 # Author : Arun CS
-# Github : https://github.com/aruncs31s/
+# Github : https://github.com/aruncs31s/PowerBeam_M5_Signal_Strength_monitor
 
 
 import serial

@@ -1,5 +1,5 @@
 # Author : Arun CS
-# Github : https://github.com/aruncs31s/
+# Github : https://github.com/aruncs31s/PowerBeam_M5_Signal_Strength_monitor
 
 """
 Note That i've used Raspberry pi 2 b for this testing and when i try to connect DHT11 to GPIO4 and read it doesnt work but somehow by connecting the sensor to GPIO7 and passing 4 to the read_retry() function works

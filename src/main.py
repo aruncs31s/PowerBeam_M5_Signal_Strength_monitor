@@ -1,12 +1,14 @@
-from logging import error
-from lib import rain as rain_meter
-from lib import humidity_temperature as dht
-from datetime import datetime
-import requests
+rom logging import error
 import http.cookiejar as cookielib
 import time
-import urllib3
+from datetime import datetime
+
+import requests
 import serial
+import urllib3
+
+from lib import humidity_temperature as dht
+from lib import rain as rain_meter
 
 serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
 

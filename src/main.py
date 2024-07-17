@@ -9,11 +9,16 @@ import urllib3
 # To Suppress the InsecureRequestWarning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+
+# Date and time for CSV
+date = datetime.now().strftime("%Y-%m-%d ")
+time = datetime.now().strftime("%H:%M:%S")
 # Define URLs change the change_me in my case it was the default ip by the antena
 base_url = "https://172.16.36.13"
 login_url = f"{base_url}/login.cgi"
 status_url = f"{base_url}/status.cgi"
-output_file = "signal_log.txt"
+output_file = "readings/{date}_log.txt"
+output_file_csv = "readings/csv/{date}_log.csv"
 
 # Define headers
 headers = {
@@ -65,6 +70,10 @@ def measure():
             # Save to file
             with open(output_file, "a") as f:
                 f.write(f"{timestamp} - Signal value: {signal_value} dBm \n")
+            # To convert to it to csv while saving
+            with open(output_file_csv, "a") as f:
+                f.write(f"{time},{signal_value}\n")
+
             time.sleep(5)
         except Exception as e:
             print(f"An error occurred: {e}")

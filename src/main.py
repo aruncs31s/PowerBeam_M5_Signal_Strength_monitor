@@ -1,17 +1,10 @@
-rom logging import error
 import http.cookiejar as cookielib
 import time
 from datetime import datetime
+from logging import error
 
 import requests
-import serial
 import urllib3
-
-from lib import humidity_temperature as dht
-from lib import rain as rain_meter
-
-serial_port = serial.Serial("/dev/ttyAMA0", 9600, timeout=1)
-
 
 # To Suppress the InsecureRequestWarning
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -63,26 +56,15 @@ def get_signal_value():
     return signal
 
 
-rain_count = rain_meter.get_count()
-
-
 def measure():
-    global rain_count
     while True:
         try:
-            temp = dht.temp()
-            humidity = dht.humidity()
             signal_value = get_signal_value()
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            print(
-                f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp}  Humidity: {humidity}"
-            )
+            print(f"{timestamp} - Signal value: {signal_value} dBm ")
             # Save to file
             with open(output_file, "a") as f:
-                f.write(
-                    f"{timestamp} - Signal value: {signal_value} dBm Temp:  {temp} C  Humidity: {humidity}  Rain Count: {rain_count} Rain Status: {rain_meter.compare(rain_count_previous=rain_count)} \n"
-                )
-            rain_count = rain_meter.get_count()
+                f.write(f"{timestamp} - Signal value: {signal_value} dBm \n")
             time.sleep(5)
         except Exception as e:
             print(f"An error occurred: {e}")

@@ -37,7 +37,7 @@ urllib3
 It reading with raspberry is more difficult and require these following for the temperature , humidity and rain sensing
 
 1. DTH11 Sensor
-2. Rain Sensor
+2. Rain Sensor (It is not used after first test)
    These are used for only to increase the accuracy
 
 ![](images/image_rpi.png?raw=true)

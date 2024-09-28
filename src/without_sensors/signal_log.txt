@@ -86,3 +86,4 @@
 2024-09-28 23:31:52 - Signal value: -51 dBm   
 2024-09-28 23:36:52 - Signal value: -50 dBm   
 2024-09-28 23:41:52 - Signal value: -49 dBm   
+2024-09-28 23:47:35 - Signal value: 0 dBm   

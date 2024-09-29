@@ -1,7 +1,6 @@
 import http.cookiejar as cookielib
 import time
 from datetime import datetime
-from logging import error
 
 import requests
 import urllib3
@@ -46,6 +45,7 @@ session.cookies.save()
 
 response = session.post(login_url, data=payload, headers=headers, verify=False)
 session.cookies.save()
+#
 
 
 # Function to get signal value , Change this data[][] to get desired values
@@ -56,24 +56,31 @@ def get_signal_value():
     return signal
 
 
-def measure():
+def print_out(timestamp, signal_value):
+    print(f"{timestamp} - Signal value: {signal_value} dBm ")
+
+
+def measure(date):
     while True:
         try:
+            # Find if this is necceary
             date = datetime.now().strftime("%Y-%m-%d")
-
             time_now = datetime.now().strftime("%H:%M:%S")
-
             signal_value = get_signal_value()
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            print(f"{timestamp} - Signal value: {signal_value} dBm ")
+            print_out(timestamp, signal_value)
             # Save to file
-            with open(output_file, "a") as f:
-                f.write(f"{timestamp} - Signal value: {signal_value} dBm   \n")
-            with open(output_file_csv, "a") as f:
-                f.write(f"{time_now},{signal_value}\n")
-            time.sleep(300)
+            if int(datetime.now().strftime("%M")) % 5 == 0:
+                with open(output_file, "a") as f:
+                    f.write(f"{timestamp} - Signal value: {signal_value} dBm   \n")
+                with open(output_file_csv, "a") as f:
+                    f.write(f"{time_now},{signal_value}\n")
+            time.sleep(1)
         except Exception as e:
             print(f"An error occurred: {e}")
+        new_date = datetime.now().strftime("%Y-%m-%d")
+        if new_date != date:
+            measure(new_date)
 
 
 #
@@ -95,7 +102,8 @@ def measure():
 
 while True:
     try:
-        measure()
+        measure(date)
     except Exception as e:
         print(f"An error occurred in the main loop: {e}")
-        time.sleep(1)
+        time.sleep(10)
+        measure(date)

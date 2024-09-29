@@ -1,2 +1,0 @@
-#LWP-Cookies-2.0
-Set-Cookie3: ui_language=en_US; path="/"; domain="172.16.36.13"; path_spec; expires="2038-01-01 00:00:00Z"; HttpOnly=None; version=0

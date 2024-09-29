@@ -134,7 +134,7 @@ void loop() {
               client.println("<script src=\"https://code.highcharts.com/highcharts.js\" ></script>");
               client.println("<style>html { font-family: Helvetica; display:inline-block; margin: 0px auto; text-align: center;}");
               client.println("</style></head>");
-              client.println("<body><h1>GCEK Weather Station</h1>");
+              client.println("<body><h1>Signal Power Monitoring</h1>");
               client.println("<h3> Station IP :  " + String(WiFi.localIP().toString()) + "</h3>");
               client.println("<div id=\"chart-temperature\" class=\"container\"></div>");
               client.println("<p id='temperature'>Temperature: " + String(new_data.temperature) +" (degree) C</p>");

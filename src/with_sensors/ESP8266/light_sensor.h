@@ -1,12 +1,12 @@
 /* Author : Arun CS
  * Github : https://github.com/aruncs31s/
- * Time : 
+ * Time :
  * Date : 20/08/2024 DD/MM/YYYY
- * Sensor : VEML7700 Ambient Light Sensor 
+ * Sensor : VEML7700 Ambient Light Sensor
  * Interface : I2C
  */
-#ifndef SENSOR_H
-#define SENSOR_H
+#ifndef __LIGHT_SENSOR_H_
+#define __LIGHT_SENSOR_H_
 
 #include <DFRobot_VEML7700.h>
 #include <Wire.h>
@@ -21,4 +21,4 @@ private:
   DFRobot_VEML7700 light_sensor; // Instance of the sensor
   float _current_intensity;
 };
-#endif // SENSOR_H
+#endif // !__LIGHT_SENSOR_H_
